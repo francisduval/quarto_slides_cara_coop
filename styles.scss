@@ -26,7 +26,7 @@ $link-color:   $theme-darkblue;
 .reveal .diapo-titre {
   &:is(.slide-background) {
     background-image: url('background.png');
-    background-size: cover;
+    background-size: 100% 105%;;
     background-position: center;
     background-repeat: no-repeat;
   }
