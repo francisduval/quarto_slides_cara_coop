@@ -1,0 +1,49 @@
+---
+format: 
+  revealjs:
+    theme: [default, styles.scss]
+    width: 1280
+    height: 720
+    chalkboard: true
+    logo: images/logo-blue.png
+    slide-number: c/t
+---
+
+## {.diapo-titre}
+
+<br>
+
+### Une coquille Quarto
+#### Pour faire de belles présentations basées sur revealjs
+
+<br>
+[par]{.lightgrey .small} Francis Duval, Chercheur Scientifique | Co-operators
+<br>
+&nbsp; [le]{.lightgrey .small} 16 novembre 2024
+
+![](images/logo-white.png){.absolute bottom=25 right=0 width=400}
+
+
+
+
+<!-- ## Aperçu de Sentence-BERT -->
+
+
+
+
+<!-- ## Représentation vectorielle (embedding) -->
+
+<!-- ::: {.callout-note appearance="simple"} -->
+<!-- ## Représentation vectorielle -->
+<!-- Une manière de convertir une chaine de caractères en **nombres** sous forme d'un **vecteur**. -->
+<!-- ::: -->
+
+<!-- ![](images/embeddings.jpg) -->
+
+<!-- ## Représentation vectorielle (embedding) -->
+
+<!-- - Un vecteur seul n'a pas de signification. -->
+<!-- - C'est lorsqu'on encode plusieurs phrases qu'on obtient du sens. -->
+
+<!-- ![](images/embeddings_2.png) -->
+
