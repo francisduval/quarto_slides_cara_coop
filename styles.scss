@@ -76,38 +76,110 @@ code.sourceCode {
 }
 
 
-// Title slide
-.reveal .diapo-titre {
+// Title slide (theme 1)
+#title-slide {
+  text-align: left;
+  margin-top: -100px;
+}
+
+.reveal .title-slide-theme-1 {
   &:is(.slide-background) {
-    //background-image: url('background.png');
-    background-image: url('coop_blue_gradient_blob.svg');
-    background-size: 100% 93%;;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-image: url('logo-white.png'), url('coop_blue_gradient_blob.svg'), url('white-background.png');
+    background-size: 25%, 100% 93%, 100% 100%;
+    background-position: 88% 90%, center top, center top;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  .title {
+    color: #FFFFFF;
+    font-size: 85px;
+  }
+  .subtitle {
+    color: $theme-lightgrey;
+    font-size: 50px !important;
+    font-weight: bold;
+    margin-bottom: 80px !important;
+  }
+  .quarto-title-authors {
+    color: #FFFFFF;
+    justify-content: left;
+    .quarto-title-author {
+      padding: 0px;
+      font-size: 40px;
+    }
+    .quarto-title-author-name {
+      &:before {
+        content: 'by';
+        color: $theme-lightgrey;
+        font-size: 25px;
+      }
+    }
+    .quarto-title-author-email {
+      text-align: left;
+      text-indent: 28px;
+    }
+  }
+  .date {
+    &:before {
+      content: 'on ';
+      color: $theme-lightgrey;
+      font-size: 25px;
+    }
+    color: #FFFFFF;
+  }
+}
+
+// Title slide (theme 2)
+.reveal .title-slide-theme-2 {
+  color: #FFFFFF;
+  &:is(.slide-background) {
+    background-image: url('logo-white.png'), url('background.png');
+    background-size: 25%, 100% 103%;
+    background-position: 88% 90%, center top;
+    background-repeat: no-repeat, no-repeat;
   }
   h3 {
     color: #FFFFFF;
     font-size: 75px;
   }
   h4 {
-    color: $theme-lightgrey;
-    font-size: 45px;
-  }
-  p {
-    color: #FFFFFF;
+   color: $theme-lightgrey;
+   font-size: 45px;
   }
 }
 
+// Title slide (theme 3)
+.reveal .title-slide-theme-3 {
+  color: #FFFFFF;
+  &:is(.slide-background) {
+    background-image: url('logo-white.png'), url('animated-background.svg');
+    background-size: 25%, 100% 93%;;
+    background-position: 88% 90%, center top;
+    background-repeat: no-repeat, no-repeat;
+  }
+  h3 {
+    color: #FFFFFF;
+    font-size: 75px;
+  }
+  h4 {
+   color: $theme-lightgrey;
+   font-size: 45px;
+  }
+}
+
+
+// Slide titles (h2 tag)
 h2 {
   color: $theme-darkblue !important;
 }
 
 
 // Utils
-.lightgrey {
-  color: $theme-lightgrey;
+.lightgrey-small {
+  color: $theme-lightgrey !important;
+  font-size: 25px !important;
 }
 
-.small {
-  font-size: 25px;
+.indent {
+  text-indent: 18px !important;
 }
+
