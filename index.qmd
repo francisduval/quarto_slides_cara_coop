@@ -5,40 +5,241 @@ format:
     width: 1280
     height: 720
     chalkboard: true
-    logo: images/logo-blue.png
+    logo: images/logo_blue_2.png
+    footer: '[https://github.com/francisduval/quarto_slides_cara_coop](https://github.com/francisduval/quarto_slides_cara_coop)'
     slide-number: c/t
+    code-block-height: 500px
 ---
 
-## {.diapo-titre}
+## {.diapo-titre background-color='white'}
 
 <br>
 
-### Une coquille Quarto
-#### Pour faire de belles présentations basées sur revealjs
+### A Quarto Template
+#### To make nice presentations based on revealjs
 
 <br>
-[par]{.lightgrey .small} Francis Duval, Chercheur Scientifique | Co-operators
+[by]{.lightgrey .small} Francis Duval, Research Scientist | Co-operators
 <br>
-&nbsp; [le]{.lightgrey .small} 16 novembre 2024
+[on]{.lightgrey .small} November 16^th^, 2024
 
 ![](images/logo-white.png){.absolute bottom=25 right=0 width=400}
 
-## Titre
+## Title
 
-### Sous-titre 1
+:::: {.columns}
 
-#### Sous-titre 2
+::: {.column width="50%"}
 
-Texte
+### Subtitle 1
 
-
-
-<!-- ## Aperçu de Sentence-BERT -->
+#### Subtitle 2
 
 
+Text
+
+**Bold text**  
+*Italic text*
+
+:::
+
+::: {.column width="50%"}
+***Bold and italic text***  
+superscript^2^  
+subscript~2~  
+~~strikethrough~~  
+`code`
+:::
+
+::::
+
+::: aside
+Some additional commentary of more peripheral interest.
+:::
+
+::: {.footer style='font-size: 10px'}
+Footer
+:::
+
+::: {.notes}
+Presenter notes
+:::
+
+## Lists
 
 
-<!-- ## Représentation vectorielle (embedding) -->
+:::: {.columns}
+
+::: {.column width="50%"}
+#### Unordered list (ul)
+
+* Item 1
+    + Sub-item 1
+        - Sub-sous-item 1
+
+#### Ordered list (ol)
+
+1. Item 1
+    i) Sub-item 1
+         A.  Sub-sous-item 1
+:::
+
+::: {.column width="50%"}
+#### Tasks
+
+- [ ] Task 1
+- [x] Task 2
+:::
+
+::::
+
+
+## Source Code
+
+Python code
+
+::: {style="font-size: 0.7em;"}
+```{.python filename='fibo.py'}
+def fibonacci(n):
+    if n < 0:
+        print('Incorrect input')
+    elif n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+```
+
+
+R code  
+```{.r filename='fibo.R' .small}
+fibonacci <- function(n) {
+  if (n <= 0) {
+    return(NULL)
+  } else if (n == 1) {
+    return(0)
+  } else if (n == 2) {
+    return(1)
+  } else {
+    return(fibonacci(n - 1) + fibonacci(n - 2))
+  }
+}
+```
+:::
+
+## Source Code
+
+::: {style="font-size: 0.7em;"}
+Highlight lines 6 to 8
+```{.python code-line-numbers="6-8"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```  
+
+Highlight lines 2, 4 and 6
+```{.python code-line-numbers="2,4,6"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+:::
+
+
+## Mathematical Formulas
+
+::: {.hidden}
+$$
+  \renewcommand{\vector}[1]{(x_1,x_2,\ldots,x_{#1})}
+$$
+:::
+
+This is an inline formula, $\small h_\theta(x) = \theta_0 + \theta_1 x_1 + \dots + \theta_n x_n$ embedded in a sentence.
+
+A centered formula (*display math*):
+$$\tiny f(x) = \frac{1}{\sqrt{(2\pi\sigma^2)}}\exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right).$$
+
+To include custom LaTeX macros, simply include them between `$$` in a `.hidden` block:
+```markdown
+::: {.hidden}
+$$
+ \renewcommand{\vector}[1]{(x_1,x_2,\ldots,x_{#1})}
+$$
+:::
+```
+
+Here's the result: $\vector{n}$
+
+
+## Mathematical Formulas
+
+A LaTeX « align » block (normalsize)
+$$
+\normalsize
+\begin{align}
+x&=y           &  w &=z              &  a&=b+c\\
+2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
+-4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
+\end{align}
+$$
+A LaTeX « align » block (tiny)
+$$
+\tiny
+\begin{align}
+x&=y           &  w &=z              &  a&=b+c\\
+2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
+-4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
+\end{align}
+$$
+
+## Diapositive « scrollable » (permet de voir du contenu trop large pour une slide normale) {.scrollable}
+
+
+
+## Diagrams
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+
+## Tabsets
+
+::: {.panel-tabset}
+
+### Tab A
+
+Content for `Tab A`
+
+### Tab B
+
+Content for `Tab B`
+
+:::
+
+
+## Miscellaneous
+
+- Website to create backgrounds: [https://bgjar.com/](https://bgjar.com/)
 
 <!-- ::: {.callout-note appearance="simple"} -->
 <!-- ## Représentation vectorielle -->
