@@ -90,7 +90,7 @@ code.sourceCode {
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
   .title {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 85px;
   }
   .subtitle {
@@ -152,7 +152,7 @@ code.sourceCode {
   color: #FFFFFF;
   &:is(.slide-background) {
     background-image: url('logo-white.png'), url('animated-background.svg');
-    background-size: 25%, 100% 93%;;
+    background-size: 25%, 100% 93%;
     background-position: 88% 90%, center top;
     background-repeat: no-repeat, no-repeat;
   }
@@ -166,10 +166,35 @@ code.sourceCode {
   }
 }
 
+// Title slide (theme 4)
+.reveal .title-slide-theme-4 {
+  color: #FFFFFF;
+  &:is(.slide-background) {
+    background-image: url('logo-white.png'), url('dark-landscape.webp');
+    background-size: 25%, 100vw 86vh;
+    background-position: 88% 90%, center;
+    background-repeat: no-repeat, no-repeat;
+  }
+  h3 {
+    color: #FFFFFF;
+    font-size: 75px;
+  }
+  h4 {
+   color: $theme-lightgrey;
+   font-size: 45px;
+  }
+}
+
+// Section titles (h1 tag)
+h1 {
+  color: $theme-darkblue !important;
+}
+
 
 // Slide titles (h2 tag)
 h2 {
   color: $theme-darkblue !important;
+  text-decoration: underline;
 }
 
 

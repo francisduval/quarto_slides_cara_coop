@@ -15,119 +15,161 @@ format:
     width: 1280
     height: 720
     chalkboard: true
+    transition: none
     logo: images/logo_blue_2.png
     footer: '[https://github.com/francisduval/quarto_slides_cara_coop](https://github.com/francisduval/quarto_slides_cara_coop)'
     slide-number: c/t
     code-block-height: 500px
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-## {.title-slide-theme-2 background-color='white'}
+##  {.title-slide-theme-2 background-color="white"}
 
 <br>
 
 ### A title slide made as a regular slide
-#### Using Markdown code  
+
+#### Using Markdown code
 
 <br>
 
-[by]{.lightgrey-small} Francis Duval, Research Scientist | Co-operators  
-[francis_duval@cooperators.ca](francis_duval@cooperators.ca){style='font-size: 25px; color:#FFFFFF; padding-left: 27px;'}  
-<br>
-[on]{.lightgrey-small} November 16^th^, 2024
+[by]{.lightgrey-small} Francis Duval, Research Scientist \|
+Co-operators\
+[francis_duval\@cooperators.ca](francis_duval@cooperators.ca){style="font-size: 25px; color:#FFFFFF; padding-left: 27px;"}\
+<br> [on]{.lightgrey-small} November 16^th^, 2024
 
-
-## {.title-slide-theme-3 background-color='white'}
+##  {.title-slide-theme-3 background-color="white"}
 
 <br>
 
 <h3>A title slide made as a regular slide</h3>
+
 <h4>Using HTML code</h4>
 
 <br>
 
-<p><span class="lightgrey-small">by </span>Francis Duval, Research Scientist | Co-operators</p>
-<p style='margin-top: -20px;'><a style="padding-left: 25px; color: #FFFFFF; font-size: 25px;" href="mailto:francis_duval@cooperators.ca">francis_duval@cooperators.ca</a></p>
+<p>[by ]{.lightgrey-small}Francis Duval, Research Scientist \|
+Co-operators</p>
 
-<p><span class='lightgrey-small'>on </span>November 16^th^, 2024</p>
+<p style="margin-top: -20px;">
 
+<a style="padding-left: 25px; color: #FFFFFF; font-size: 25px;" href="mailto:francis_duval@cooperators.ca">francis_duval\@cooperators.ca</a>
 
-## A title much too long to be only on ine single line in this slide
+</p>
+
+<p>[on ]{.lightgrey-small}November 16^th^, 2024</p>
+
+##  {.title-slide-theme-4 background-color="white"}
+
+<br> <br> <br>
+
+<center>
+
+<h3>A title slide made as a regular slide</h3>
+
+</center>
+
+<center>
+
+<h4>Another theme</h4>
+
+</center>
+
+<br>
+
+<center>
+
+<p>[by ]{.lightgrey-small} Francis Duval, Research Scientist \|
+Co-operators</p>
+
+</center>
+
+<center>
+
+<p style="margin-top: -20px;">
+
+<a style="padding-left: 25px; color: #FFFFFF; font-size: 25px;" href="mailto:francis_duval@cooperators.ca">francis_duval\@cooperators.ca</a>
+
+</p>
+
+</center>
+
+<center>
+
+<p>[on ]{.lightgrey-small} November 16^th^, 2024</p>
+
+</center>
+
+# Basics
 
 ## Title
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
-
 ### Subtitle 1
 
 #### Subtitle 2
 
-
 Text
 
-**Bold text**  
+**Bold text**\
 *Italic text*
-
 :::
 
 ::: {.column width="50%"}
-***Bold and italic text***  
-superscript^2^  
-subscript~2~  
-~~strikethrough~~  
+***Bold and italic text***\
+superscript^2^\
+subscript~2~\
+~~strikethrough~~\
 `code`
 :::
-
-::::
+:::
 
 ::: aside
 Some additional commentary of more peripheral interest.
 :::
 
-::: {.footer style='font-size: 10px'}
+::: {.footer style="font-size: 10px"}
 Footer
 :::
 
-::: {.notes}
+::: notes
 Presenter notes
 :::
 
 ## Lists
 
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 #### Unordered list (ul)
 
-* Item 1
-    + Sub-item 1
-        - Sub-sous-item 1
+-   Item 1
+    -   Sub-item 1
+        -   Sub-sous-item 1
 
 #### Ordered list (ol)
 
-1. Item 1
-    i) Sub-item 1
-         A.  Sub-sous-item 1
+1.  Item 1
+    i)  Sub-item 1
+        A.  Sub-sous-item 1
 :::
 
 ::: {.column width="50%"}
 #### Tasks
 
-- [ ] Task 1
-- [x] Task 2
+-   [ ] Task 1
+-   [x] Task 2
 :::
-
-::::
-
+:::
 
 ## Source Code
 
 Python code
 
 ::: {style="font-size: 0.7em;"}
-```{.python filename='fibo.py'}
+``` {.python filename="fibo.py"}
 def fibonacci(n):
     if n < 0:
         print('Incorrect input')
@@ -139,9 +181,9 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
+R code
 
-R code  
-```{.r filename='fibo.R' .small}
+``` {.r .small filename="fibo.R"}
 fibonacci <- function(n) {
   if (n <= 0) {
     return(NULL)
@@ -160,7 +202,8 @@ fibonacci <- function(n) {
 
 ::: {style="font-size: 0.7em;"}
 Highlight lines 6 to 8
-```{.python code-line-numbers="6-8"}
+
+``` {.python code-line-numbers="6-8"}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -171,10 +214,11 @@ ax.plot(theta, r)
 ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.show()
-```  
+```
 
 Highlight lines 2, 4 and 6
-```{.python code-line-numbers="2,4,6"}
+
+``` {.python code-line-numbers="2,4,6"}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -188,22 +232,31 @@ plt.show()
 ```
 :::
 
+## Share Pictures of Code
+
+<br>
+Made on [https://codeimage.dev/](https://codeimage.dev/):  
+![](images/snap-code.svg){style='margin-left: -60px; margin-top: -30px'}
 
 ## Mathematical Formulas
 
-::: {.hidden}
+::: hidden
 $$
   \renewcommand{\vector}[1]{(x_1,x_2,\ldots,x_{#1})}
 $$
 :::
 
-This is an inline formula, $\small h_\theta(x) = \theta_0 + \theta_1 x_1 + \dots + \theta_n x_n$ embedded in a sentence.
+This is an inline formula,
+$\small h_\theta(x) = \theta_0 + \theta_1 x_1 + \dots + \theta_n x_n$
+embedded in a sentence.
 
 A centered formula (*display math*):
 $$\tiny f(x) = \frac{1}{\sqrt{(2\pi\sigma^2)}}\exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right).$$
 
-To include custom LaTeX macros, simply include them between `$$` in a `.hidden` block:
-```markdown
+To include custom LaTeX macros, simply include them between `$$` in a
+`.hidden` block:
+
+``` markdown
 ::: {.hidden}
 $$
  \renewcommand{\vector}[1]{(x_1,x_2,\ldots,x_{#1})}
@@ -213,20 +266,16 @@ $$
 
 Here's the result: $\vector{n}$
 
-
 ## Mathematical Formulas
 
-A LaTeX « align » block (normalsize)
-$$
+A LaTeX « align » block (normalsize) $$
 \normalsize
 \begin{align}
 x&=y           &  w &=z              &  a&=b+c\\
 2x&=-y         &  3w&=\frac{1}{2}z   &  a&=b\\
 -4 + 5x&=2+y   &  w+2&=-1+w          &  ab&=cb
 \end{align}
-$$
-A LaTeX « align » block (tiny)
-$$
+$$ A LaTeX « align » block (tiny) $$
 \tiny
 \begin{align}
 x&=y           &  w &=z              &  a&=b+c\\
@@ -236,8 +285,6 @@ x&=y           &  w &=z              &  a&=b+c\\
 $$
 
 ## Diapositive « scrollable » (permet de voir du contenu trop large pour une slide normale) {.scrollable}
-
-
 
 ## Diagrams
 
@@ -249,11 +296,9 @@ flowchart LR
   C --> E[Result two]
 ```
 
-
 ## Tabsets
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ### Tab A
 
 Content for `Tab A`
@@ -261,17 +306,30 @@ Content for `Tab A`
 ### Tab B
 
 Content for `Tab B`
-
 :::
 
 
+## [Absolute Positioning]{.absolute top=200 left=100 style='transform: rotate(20deg); text-decoration: underline;'}  
+### [Place something anywhere and how you want it]{.absolute top=400 left=100 style='transform: rotate(-20deg);'}  
+
+
+![](images/apple.webp){.absolute top=-2 left=758 width='20'}
+![](images/apple.webp){.absolute top=261 left=878 width='17' style='transform: rotate(-20deg);'}
+![](images/apple.webp){.absolute bottom=0 left=0 width='100'}
+![](images/apple.webp){.absolute bottom=130 left=750 width='150' style='transform: rotate(90deg);'}
+[text]{.absolute bottom=0, right=0}
+[rotated text]{.absolute bottom=0, right=400 style='transform: rotate(45deg);'}
+
 ## Miscellaneous
 
-- Website to create backgrounds: [https://bgjar.com/](https://bgjar.com/)
+-   Website to create backgrounds: <https://bgjar.com/>
 
 <!-- ::: {.callout-note appearance="simple"} -->
+
 <!-- ## Représentation vectorielle -->
+
 <!-- Une manière de convertir une chaine de caractères en **nombres** sous forme d'un **vecteur**. -->
+
 <!-- ::: -->
 
 <!-- ![](images/embeddings.jpg) -->
@@ -279,7 +337,7 @@ Content for `Tab B`
 <!-- ## Représentation vectorielle (embedding) -->
 
 <!-- - Un vecteur seul n'a pas de signification. -->
+
 <!-- - C'est lorsqu'on encode plusieurs phrases qu'on obtient du sens. -->
 
 <!-- ![](images/embeddings_2.png) -->
-
